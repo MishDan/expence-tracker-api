@@ -8,7 +8,7 @@ from restapi import models
 
 class TestModels(TestCase):
     def test_expense(self):
-        expense = models.Expence.object.create(
+        expense = models.Expence.objects.create(
             amount=249.99,
             merchant="amazon",
             description="anc headphones",
