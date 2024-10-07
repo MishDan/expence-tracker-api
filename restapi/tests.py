@@ -14,7 +14,7 @@ class TestModels(TestCase):
             description="anc headphones",
             category="music",
         )
-        inserted_expense = models.Expence.object.get(pk=expense.id)
+        inserted_expense = models.Expence.objects.get(pk=expense.id)
 
         self.assertEqual(249.99, inserted_expense.amount)
         self.assertEqual("amazon", inserted_expense.merchant)
