@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [-f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       # You can test your matrix by printing the current Python version
       - name: Test with python manage.py
         run: |
