@@ -1,4 +1,4 @@
-name: Python unittest
+name: Python django
 
 on: [push]
 
@@ -21,8 +21,8 @@ jobs:
           python -m pip install --upgrade pip
           if [-f requirements.txt ]; then pip install -r requirements.txt; fi
       # You can test your matrix by printing the current Python version
-      - name: Test with unittest
+      - name: Test with python manage.py
         run: |
-          python -m unittest
+          python manage.py test
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
